@@ -1,0 +1,35 @@
+.grid-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+        "header header"
+        "content content"
+        "footer footer";
+}
+
+.header {
+    grid-area: header;
+    background: red;
+}
+
+.header-row {
+    display: inline-block;
+}
+
+.logout-button {
+    float: right;
+    margin: 20px;
+}
+
+.content {
+    grid-area: content;
+}
+
+.footer {
+    grid-area: footer;
+    background: aqua;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+

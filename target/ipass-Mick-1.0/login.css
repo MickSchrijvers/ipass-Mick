@@ -1,0 +1,25 @@
+input[id=nameInput], input[id=passwordInput] {
+    border: 2px solid black;
+    box-sizing: border-box;
+}
+.grid-container{
+    display: grid;
+    grid-template-columns: 200px 200px;
+    row-gap: 40px;
+    left      : 50%;
+    top       : 30%;
+    position  : absolute;
+    transform : translate(-50%, -50%);
+}
+
+#nameLabel{
+    text-align: center;
+}
+
+#passwordLabel{
+    text-align: center;
+}
+
+
+
+

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="login.css">
+    <script type="text/javascript" src="login.js"></script>
+    <meta charset="UTF-8">
+    <title>Login page</title>
+</head>
+<body>
+<form  method="post">
+    <div class="grid-container">
+        <label id="nameLabel">Naam: </label>
+        <input type="text" placeholder="Voer je naam in" id="nameInput">
+        <label id="passwordLabel">Wachtwoord: </label>
+        <input type="password" placeholder="Voer je wachtwoord in" id="passwordInput">
+<!--        <input type="submit" id="loginButton" value="Login" >-->
+        <button type="button" id="loginButton" onclick="getFormInputValues()">Login</button>
+    </div>
+</form>
+</body>
+</html>
