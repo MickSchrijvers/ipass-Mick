@@ -3,7 +3,7 @@
     grid-template-columns: 1fr 1fr;
     grid-template-areas:
         "header header"
-        "content content"
+        "recipe-list recipe"
         "footer footer";
 }
 
@@ -16,13 +16,20 @@
     display: inline-block;
 }
 
-.logout-button {
+.header-button {
     float: right;
     margin: 20px;
 }
 
-.content {
-    grid-area: content;
+.recipe-list {
+    grid-area: recipe-list;
+}
+
+.recipe {
+    grid-area: recipe;
+    border: aqua;
+    border-style: double;
+    background-color: beige;
 }
 
 .footer {

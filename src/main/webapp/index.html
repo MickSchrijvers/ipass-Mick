@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <link rel="stylesheet" href="index.css">
-    <script type="text/javascript" src="index.js"></script>
+    <script type="text/javascript" src="index.js" defer></script>
     <meta charset="UTF-8">
     <title>Index</title>
 </head>
@@ -12,11 +12,21 @@
         <div class="header-row">
             <p>Header</p>
         </div>
-        <div class="header-row logout-button">
+        <div class="header-row header-button">
             <button type="button" id="logout-button" onclick="logout()">Logout</button>
         </div>
+        <div class="header-row header-button">
+            <button type="button" id="new-recipe-button" onclick="">New recipe</button>
+        </div>
     </div>
-    <div class="content">Content</div>
+
+    <div class="recipe-list" id="recipe-list">Lijst
+
+    </div>
+
+    <div class="recipe" id="recipe">Recept
+    </div>
+
     <div class="footer">Footer</div>
 </div>
 </body>
