@@ -3,7 +3,7 @@
     grid-template-columns: 1fr 1fr;
     grid-template-areas:
         "header header"
-        "recipe-list recipe"
+        "recipe-list recipe-box"
         "footer footer";
 }
 
@@ -25,8 +25,8 @@
     grid-area: recipe-list;
 }
 
-.recipe {
-    grid-area: recipe;
+.recipe-box {
+    grid-area: recipe-box;
     border: aqua;
     border-style: double;
     background-color: beige;

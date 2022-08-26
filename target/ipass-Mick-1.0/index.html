@@ -7,7 +7,7 @@
     <title>Index</title>
 </head>
 <body>
-<div class="grid-container">
+<div class="grid-container" id="container">
     <div class="header">
         <div class="header-row">
             <p>Header</p>
@@ -16,7 +16,10 @@
             <button type="button" id="logout-button" onclick="logout()">Logout</button>
         </div>
         <div class="header-row header-button">
-            <button type="button" id="new-recipe-button" onclick="">New recipe</button>
+            <button type="button" id="new-recipe-button" onclick="newRecipe()">New recipe</button>
+        </div>
+        <div class="header-row header-button">
+            <button type="button" id="test" onclick="initializer()">New recipe</button>
         </div>
     </div>
 
@@ -24,7 +27,9 @@
 
     </div>
 
-    <div class="recipe" id="recipe">Recept
+    <div class="recipe-box" id="recipe-box">
+        <div class="recipe" id="recipe">Recept:
+        </div>
     </div>
 
     <div class="footer">Footer</div>
