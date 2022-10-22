@@ -49,13 +49,10 @@ public class GebruikerResource {
     }
 
     private static Gebruiker getGebruikerBijToken(String token){
-//        System.out.println(token);
-//        System.out.println(key);
         JwtParser parser = Jwts.parser().setSigningKey(GebruikerResource.key);
         Claims claims = parser.parseClaimsJws(token).getBody();
 
         Gebruiker gebruiker = Gebruiker.getGebruikerBijId((Integer) claims.get("id"));
-//        System.out.println(gebruiker.getNaam());
 
         return gebruiker;
     }
@@ -103,7 +100,7 @@ public class GebruikerResource {
     @Consumes(MediaType.APPLICATION_JSON)
     @Produces(MediaType.APPLICATION_JSON)
     public Response getRecept(@PathParam("gerechtid") int gerechtId){
-        ArrayList<Gerecht> alleGerechtenList = Gerecht.getAlleGerechten();
+        ArrayList<Gerecht> alleGerechtenList = new ArrayList<>();
         Recept recept;
 
         if (alleGerechtenList != null) {

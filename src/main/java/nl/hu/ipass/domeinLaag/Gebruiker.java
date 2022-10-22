@@ -1,15 +1,15 @@
 package nl.hu.ipass.domeinLaag;
 
-import nl.hu.ipass.controllerLaag.Initializer;
+import nl.hu.ipass.databaseLaag.downloaders.downloaderGebruiker;
 
+import java.io.Serializable;
 import java.security.Principal;
 import java.time.Instant;
 import java.util.ArrayList;
 
-import static java.lang.Integer.parseInt;
-
-public class Gebruiker implements Principal {
+public class Gebruiker implements Principal, Serializable {
     private static ArrayList<Gebruiker> alleGebruikers = new ArrayList<>();
+    static final long serialVersionUID = 8664435949033281628L;
 
     private int id;
     private String naam;
@@ -18,24 +18,7 @@ public class Gebruiker implements Principal {
     private Kookboek kookboek;
 
     static {
-
-        Initializer.loadUsers();
-
-
-//        alleGebruikers.add(new Gebruiker("Hans", "root", "admin"));
-//
-//        Recept testRecept = new Recept("Nieuw recept");
-//        testRecept.updateBenodigdheden("Ijsje");
-//        testRecept.updateStappen("Likken");
-//
-//        Gerecht testGerecht = new Gerecht("Nieuw gerecht");
-//        testGerecht.setRecept(testRecept);
-//
-//        Kookboek testKookboek = new Kookboek("Nieuw kookboek");
-//        testKookboek.updateGerechten(testGerecht);
-//
-//        Gebruiker testGebruiker = Gebruiker.getGebruikerBijNaam("Hans");
-//        testGebruiker.setKookboek(testKookboek);
+        downloaderGebruiker.download();
     }
 
     public Gebruiker(String naam, String wachtwoord, String rol){
@@ -119,5 +102,9 @@ public class Gebruiker implements Principal {
     @Override
     public String getName() {
         return null;
+    }
+
+    public String toString(){
+        return this.naam;
     }
 }

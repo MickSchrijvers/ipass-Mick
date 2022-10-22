@@ -96,6 +96,11 @@
           <artifactId>velocity</artifactId>
           <version>1.5</version>
       </dependency>
+    <dependency>
+      <groupId>com.azure</groupId>
+      <artifactId>azure-storage-blob</artifactId>
+      <version>12.20.0</version>
+    </dependency>
 
   </dependencies>
 

@@ -1,9 +1,12 @@
 package nl.hu.ipass.domeinLaag;
 
+import java.io.Serializable;
 import java.time.Instant;
 import java.util.ArrayList;
 
-public class Recept {
+public class Recept implements Serializable {
+    static final long serialVersionUID = 6283799384352347633L;
+
     private int id;
     private String titel;
     private ArrayList<String> stappen;

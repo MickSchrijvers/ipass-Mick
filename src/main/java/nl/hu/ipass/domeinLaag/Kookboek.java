@@ -1,9 +1,12 @@
 package nl.hu.ipass.domeinLaag;
 
+import java.io.Serializable;
 import java.time.Instant;
 import java.util.ArrayList;
 
-public class Kookboek {
+public class Kookboek implements Serializable {
+    static final long serialVersionUID = -4112007155508867319L;
+
     private int id;
     private String titel;
     private ArrayList<Gerecht> gerechten;
